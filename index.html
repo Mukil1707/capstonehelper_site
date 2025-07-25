@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capstone helper😎</title>
+  <link rel="icon" href="img/icon1.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    #hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 4em 2em;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+    }
+
+    .hero-content p {
+      margin: 1em 0;
+    }
+
+    .btn {
+      background: #ffd700;
+      color: #111;
+      padding: 0.75em 1.5em;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e0c100;
+    }
+
+    section {
+      padding: 3em 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: #111;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input, textarea {
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button {
+      background: #111;
+      color: white;
+      padding: 0.75em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+        margin-top: 1em;
+      }
+
+      .hero-content h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      form input, form textarea {
+        width: 100%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Capstone helper😎</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to Capstone helper😎</h1>
+      <p>Your digital presence, elevated ⭐️</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <center>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Code. Create. Change the world. 💫.</p>
+    </section>
+  </center>
+  <hr>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Project Guidance & Ideas 💡</h3>
+        <p>We help you choose impactful and innovative capstone project topics tailored to your field.</p>
+      </div>
+      <div class="service-card">
+        <h3>Code Development & Simulation 👨‍💻</h3>
+        <p>Get custom-built code, full-stack project development, and interactive simulations.</p>
+      </div>
+      <div class="service-card">
+        <h3>Documentation & Presentation 📄📊</h3>
+        <p>Complete support with reports, PPTs, SRS, and viva preparation to ace your final review.</p>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <!-- Update the action URL with your own Formspree form ID after registering at formspree.io -->
+    <form action="https://formspree.io/f/xldlbbzd" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <!-- Optional: Direct email link if you want users to email you directly -->
+    <!-- <p>Or email us at: <a href="mailto:mukil1707@gmail.com">mukil1707@gmail.com</a></p> -->
+  </section>
+
+  <footer>
+    <p>© 2025 Mukil Site. All rights reserved.</p>
+    <p>Visit us: <a href="https://mukil.lovestoblog.com" target="_blank">mukil.lovestoblog.com</a></p>
+  </footer>
+</body>
+</html>
